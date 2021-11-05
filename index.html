@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Programs</title>
+</head>
+<body>
+    <script>
+        // An example to count 1 to 10
+        var recursive = (val=0)=>
+        {
+            val+=1;
+            if(val == 10)
+            {
+                
+                return 
+            }
+            else
+            {
+                console.log(val)
+                return recursive(val)
+            }
+           
+        }
+
+        // An example that displays n dimentional array values
+        var array =[[1,2,4,5,["esdasd",9],8],2,10,["fsada",3,4,[4,7,[2,10,[100,150,[300,50,1]]],3,1]]]
+        var dimension = 0
+        var recursive = (val=[])=>
+        {
+            dimension+=1;
+
+            if(dimension == 100)
+            {
+                return
+            }
+            for(var i=0;i<val.length;i++)
+            {
+                if(Array.isArray(val[i]))
+                {
+                    recursive(val[i]);
+                }
+                else
+                {
+                    console.log(val[i])
+                }
+                if(i == val.length-1)
+                {
+                    break
+                }
+                
+            }
+        }
+        recursive(array);
+    </script>
+</body>
+</html>
