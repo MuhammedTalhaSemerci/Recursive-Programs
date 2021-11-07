@@ -13,4 +13,4 @@ var recursive = (val=0)=>
     }
    
 }
-recursive(array);
+recursive();
